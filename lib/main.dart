@@ -6,13 +6,12 @@ import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';//check if
 import 'package:sudoku_solver_generator/sudoku_solver_generator.dart';
 import 'alerts/all.dart';
 import 'board_style.dart';
-import 'styles.dart';
+
+import 'colors.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setPreferredOrientations(
-  //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+
   runApp(const MyApp());
 }
 String x="";
@@ -28,10 +27,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sudoku',
+
+      title: 'SUDOKU',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
+
       ),
       home: const HomePage(),
     );
@@ -58,7 +59,6 @@ class HomePageState extends State<HomePage> {
   static String platform = () {
     return defaultTargetPlatform
         .toString()
-        .replaceFirst("TargetPlatform.", "")
         .toLowerCase();
   }();
 
@@ -99,11 +99,6 @@ class HomePageState extends State<HomePage> {
       [String difficulty = 'easy']) async {
     int emptySquares;
     switch (difficulty) {
-      case 'test':
-        {
-          emptySquares = 2;
-        }
-        break;
 
       case 'easy':
         {
@@ -269,7 +264,9 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sudoku'),
+
+        title: const Text('SUDOKU'),
+
         actions: [
           IconButton(
             icon: Icon(Icons.replay_outlined),

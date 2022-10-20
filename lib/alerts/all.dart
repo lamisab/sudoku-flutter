@@ -1,3 +1,3 @@
-export 'exit.dart';
-export 'game_over.dart';
-export 'numbers.dart';
+
+export 'win_game.dart';
+export 'random-number.dart';

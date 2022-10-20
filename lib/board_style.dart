@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'main.dart';
-import 'styles.dart';
+
+import 'colors.dart';
 
 MaterialColor emptyColor(bool gameOver) =>
-    gameOver ? Styles.primaryColor : Styles.secondaryColor;
+    gameOver ? Styles.primaryColor : Styles.grey;
+
 
 Color buttonColor(int k, int i) {
   Color color;
