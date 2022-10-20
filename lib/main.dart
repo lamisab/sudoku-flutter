@@ -6,12 +6,10 @@ import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';//check if
 import 'package:sudoku_solver_generator/sudoku_solver_generator.dart';
 import 'alerts/all.dart';
 import 'board_style.dart';
-
 import 'colors.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
   runApp(const MyApp());
 }
 String x="";
@@ -27,12 +25,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       title: 'SUDOKU',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.grey,
-
       ),
       home: const HomePage(),
     );
@@ -264,9 +260,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         title: const Text('SUDOKU'),
-
         actions: [
           IconButton(
             icon: Icon(Icons.replay_outlined),

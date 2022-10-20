@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'main.dart';
-
 import 'colors.dart';
 
 MaterialColor emptyColor(bool gameOver) =>
     gameOver ? Styles.primaryColor : Styles.grey;
-
 
 Color buttonColor(int k, int i) {
   Color color;
@@ -19,7 +17,7 @@ Color buttonColor(int k, int i) {
       color = Colors.grey.shade300!;
     }
   } else {
-    color = Color.fromARGB(255, 237, 245, 246);
+    color = Colors.blueGrey.shade100!;
   }
 
   return color;
